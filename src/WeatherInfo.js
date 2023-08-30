@@ -2,9 +2,11 @@ import useFetch from "./useFetch";
 import weatherImages from "./ImageImport"
 import Time from "./Time";
 import SunTimes from "./SunTimes";
+import usePosition from "./usePosition";
 
 const WeatherInfo = () => {
   const { weatherData } = useFetch();
+  const { lat, long } = usePosition();
   let isNightTime = false;
   let imageKey = null;
 
@@ -40,7 +42,7 @@ const WeatherInfo = () => {
 
   return (
     <>
-      {weatherData && (
+      {(weatherData && (lat && long)) ? (
         <div className="flex-col flex justify-center items-center">
           <Time />
           <h2 className="font-graphikRegular text-4xl mb-5">
@@ -82,6 +84,8 @@ const WeatherInfo = () => {
 
           <SunTimes data={weatherData} />
         </div>
+      ) : (
+        <div className="h-full w-full flex items-center justify-center font-graphikRegular text-gray-100/75">Allow Access to Location</div>
       )}
     </>
   );

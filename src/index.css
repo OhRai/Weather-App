@@ -1,13 +1,46 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+/* Graphik Bold */
+@font-face {
+    font-family: 'GraphikBold';
+    src: url('./fonts/GraphikBold.otf') format('opentype');
+    /* Add more font formats (e.g., woff, woff2, ttf) if needed */
+  }
+  
+  /* Graphik Extralight */
+  @font-face {
+    font-family: 'GraphikExtralight';
+    src: url('./fonts/GraphikExtralight.otf') format('opentype');
+    /* Add more font formats (e.g., woff, woff2, ttf) if needed */
+  }
+  
+  /* Graphik Light */
+  @font-face {
+    font-family: 'GraphikLight';
+    src: url('./fonts/GraphikLight.otf') format('opentype');
+    /* Add more font formats (e.g., woff, woff2, ttf) if needed */
+  }
+  
+  /* Graphik Medium */
+  @font-face {
+    font-family: 'GraphikMedium';
+    src: url('./fonts/GraphikMedium.otf') format('opentype');
+    /* Add more font formats (e.g., woff, woff2, ttf) if needed */
+  }
+  
+  /* Graphik Regular */
+  @font-face {
+    font-family: 'GraphikRegular';
+    src: url('./fonts/GraphikRegular.otf') format('opentype');
+    /* Add more font formats (e.g., woff, woff2, ttf) if needed */
+  }
+  
+  /* Graphik Thin */
+  @font-face {
+    font-family: 'GraphikThin';
+    src: url('./fonts/GraphikThin.otf') format('opentype');
+    /* Add more font formats (e.g., woff, woff2, ttf) if needed */
+  }
+  

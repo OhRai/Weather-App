@@ -41,9 +41,9 @@ const WeatherInfo = () => {
   }
 
   return (
-    <>
+    <div className="flex-col justify-between">
       {(weatherData && (lat && long)) ? (
-        <div className="flex-col flex justify-center items-center">
+        <div className="flex-col flex items-center">
           <Time />
           <h2 className="font-graphikRegular text-4xl mb-5">
             {weatherData.name + ', ' + weatherData.sys.country}
@@ -81,13 +81,12 @@ const WeatherInfo = () => {
               </div>
             </div>
           </div>
-
           <SunTimes data={weatherData} />
         </div>
       ) : (
         <div className="h-full w-full flex items-center justify-center font-graphikRegular text-gray-100/75">Allow Access to Location</div>
       )}
-    </>
+    </div>
   );
 }
 
